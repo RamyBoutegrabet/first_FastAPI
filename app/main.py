@@ -48,10 +48,6 @@ def get_post(id : int):
         return {"post_detail" : post}
 
 @app.delete("/posts/{id}", status_code=status.HTTP_204_NO_CONTENT)
-#def delete_post(id : int):
-#    #deleting post
-#    return "post deleted succesfully"""
-
 def delete_post(id : int):
     index = find_index_post(id)
     if index == None :
