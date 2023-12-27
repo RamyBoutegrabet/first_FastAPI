@@ -1,14 +1,15 @@
 from typing import Optional, List
 from fastapi import Body, FastAPI, status, HTTPException, Response, Depends
 from pydantic import BaseModel
-from passlib.context import CryptContext
+
 from random import randrange
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import time
 from sqlalchemy.orm import Session
-from . import models, schemas
+from . import models, schemas, utils
 from .database import engine, get_db
+from .routers import post, user
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -41,8 +42,12 @@ def find_index_post(id):
     for i,p in enumerate(my_posts):
         if p['id'] == id:
             return i
+
+
+app.include_router(post.router)
+app.include_router(user.router)
+
 @app.get("/")
 def root():
     return{"message": "Welcome To My API"}
-    
     

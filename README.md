@@ -7,7 +7,9 @@ Done :
 
 - CRUD operations without Databases. 
 - Will Work on CRUD ops with Databases later.
-To Do :
-
 - Start working on User ops
+- project restructuration (framework like)
+- path ops definition post restructuration
+To Do :
+-start working on the documentation
 
