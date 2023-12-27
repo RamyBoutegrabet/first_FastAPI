@@ -6,7 +6,8 @@ from typing import List
 
 
 router = APIRouter(
-    prefix="/users"
+    prefix="/users",
+    tags=['Users']
 )
 
 
