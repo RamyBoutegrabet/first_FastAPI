@@ -12,10 +12,10 @@ This will be a backend project with no interface.
     - path ops definition post restructuration
     - started working on the documentation (added tags to the /docs)
     - Started working on authentication
-
+    - Will now add tokenization to the authentication
 # To Do :
 
-    -  Will now add tokenization to the authentication
+    - Will force users to login in order to access the content of the app
 
 
 
